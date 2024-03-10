@@ -1,5 +1,5 @@
 <?php 
-//require_once "../cors.php";
+require_once "../cors.php";
 require_once "../config.php";
 
 $sql = "SELECT * FROM `dipendenti`";
@@ -17,6 +17,8 @@ if ($result->num_rows > 0) {
         $object->ruolo = $row["ruolo"]; 
         $object->assunzione = $row["assunzione"]; 
         $object->nazione = $row["nazione"]; 
+        $object->email = $row["email"]; 
+        $object->telefono = $row["telefono"]; 
         array_push($data, $object);
     }
   } else {

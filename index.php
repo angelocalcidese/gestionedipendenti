@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="it" data-bs-theme="auto">
   <head>
     <script src="assets/bootstrap/js/color-modes.js"></script>
     <meta charset="utf-8">
@@ -10,14 +10,12 @@
     <title>Saci Group </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">-->
 
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/jquery-ui/jquery-ui.css">
     <link href="assets/style.css" rel="stylesheet">
-
-    
-
+    <link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -160,39 +158,39 @@
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
-                <svg class="bi"><use xlink:href="#house-fill"/></svg>
+                <i class="fa-solid fa-house"></i>
                 Homepage
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#people"/></svg>
-              Dipendenti
+                <i class="fa-solid fa-users"></i>
+                Dipendenti
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#file-earmark"/></svg>
-                Orders
+                <i class="fa-solid fa-tv"></i>
+                Beni Aziendali
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#cart"/></svg>
-                Products
+                <i class="fa-solid fa-car"></i>
+                Gestione Parco Auto
               </a>
             </li>
             
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#graph-up"/></svg>
-                Reports
+               <i class="fa-solid fa-triangle-exclamation"></i>
+                Whistleblowing
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="#">
-                <svg class="bi"><use xlink:href="#puzzle"/></svg>
-                Integrations
+               <i class="fa-solid fa-folder"></i>
+                Condivisione Documenti
               </a>
             </li>
           </ul>
@@ -269,17 +267,17 @@
 <div class="row">
     <div class="col">
         <div class="text-end">
-           <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Nuovo Dipendente</button>
+           <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#addUser" data-bs-whatever="@mdo">Nuovo Dipendente</button>
         </div>
     </div>
 </div>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuovo Dipendente</h1>
+        <h1 class="modal-title fs-5" id="addUserLabel">Nuovo Dipendente</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -317,6 +315,41 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="viewUser" tabindex="-1" aria-labelledby="viewUserLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="addUserLabel">Visualizza dati dipendente</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="text-center">
+                <img data-src="holder.js/200x200" class="rounded" alt="200x200" style="width: 200px; height: 200px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e2832c287%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e2832c287%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2274.41666603088379%22%20y%3D%22104.40000009536743%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+              </div>
+            </div>
+            <div class="col-md-7 ms-auto">
+              <p>Nome: <b><span id="nome-view"></span></b></p>
+              <p>Cognome: <b><span id="cognome-view"></span></b></p>
+              <p>Codice Fiscale: <b><span id="cf-view"></span></b></p>
+              <p>Anno di nascita: <b><span id="nascita-view"></span></b></p>
+              <p>Ruolo: <b><span id="ruolo-view"></span></b></p>
+              <p>Data Assunzione: <b><span id="assunzione-view"></span></b></p>
+              <p>Telefono: <b><span id="telefono-view"></span></b></p>
+              <p>E-mail: <b><span id="email-view"></span></b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+      </div>
+    </div>
+  </div>
+</div>
       <h2>Dipendenti</h2>
       <div class="table-responsive small">
         <table class="table table-striped table-sm" id="tabella">
@@ -328,7 +361,9 @@
               <th scope="col">CF</th>
               <th scope="col">Anno di nascita</th>
               <th scope="col">Ruolo</th>
-              <th scope="col">Data Assunzione</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody >
@@ -340,14 +375,16 @@
 </div>
 <!-- jQuery library -->
 <script src="assets/jquery/jquery-3.7.1.min.js"></script>
- <script src="assets/jquery-ui/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#inputnascita" ).datepicker();
-  } );
-  </script>
+<script src="assets/jquery-ui/jquery-ui.js"></script>
+<script src="assets/jquery-ui/datepicker-it.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/fontawesome/js/all.min.js"></script>
 <script src="assets/service.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
+<script>
+  $(document).ready(function () {
+    $("#inputnascita").datepicker($.datepicker.regional['it']);
+    $("#inputeng").datepicker($.datepicker.regional['it']);
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
 </html>
