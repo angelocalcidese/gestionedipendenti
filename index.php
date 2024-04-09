@@ -12,7 +12,7 @@
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Gestione</h1>
-          <div class="btn-toolbar mb-2 mb-md-0">
+          <!--<div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
               <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
               <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
@@ -23,20 +23,20 @@
               </svg>
               This week
             </button>
-          </div>
+          </div>-->
         </div>
 
         <!--<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>-->
         <div class="row">
           <div class="col">
             <div class="text-end">
-              <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#addUser" data-bs-whatever="@mdo">Nuovo Dipendente</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#addRow" data-bs-whatever="@mdo">Nuovo Dipendente</button>
             </div>
           </div>
         </div>
 
 
-        <div class="modal fade" id="addUser" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
+        <div class="modal fade" id="addRow" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -44,36 +44,50 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form>
+                <div class="alert alert-primary hide" id="alert-success" role="alert"></div>
+                <div class="alert alert-danger hide" id="alert-error" role="alert"></div>
+                <form id="form-add">
                   <div class="mb-3">
-                    <label for="inputname" class="col-form-label">Nome:</label>
-                    <input type="text" class="form-control" id="inputname">
+                    <label for="input-nome" class="col-form-label">Nome:</label>
+                    <input type="text" class="form-control input-insert" id="input-nome">
                   </div>
                   <div class="mb-3">
-                    <label for="inputsurname" class="col-form-label">Cognome:</label>
-                    <input type="text" class="form-control" id="inputsurname">
+                    <label for="input-cognome" class="col-form-label">Cognome:</label>
+                    <input type="text" class="form-control input-insert" id="input-cognome">
                   </div>
                   <div class="mb-3">
-                    <label for="inputcf" class="col-form-label">CF:</label>
-                    <input type="text" class="form-control" id="inputcf">
+                    <label for="input-cf" class="col-form-label">CF:</label>
+                    <input type="text" class="form-control input-insert" id="input-cf">
                   </div>
                   <div class="mb-3">
-                    <label for="inputnascita" class="col-form-label">Anno di nascita:</label>
-                    <input type="text" class="form-control" id="inputnascita">
+                    <label for="input-nascita" class="col-form-label">Anno di nascita:</label>
+                    <input type="text" class="form-control input-insert" id="input-nascita">
                   </div>
                   <div class="mb-3">
-                    <label for="inputrole" class="col-form-label">Ruolo:</label>
-                    <input type="text" class="form-control" id="inputrole">
+                    <label for="input-ruolo" class="col-form-label">Ruolo:</label>
+                    <input type="text" class="form-control input-insert" id="input-ruolo">
                   </div>
                   <div class="mb-3">
-                    <label for="inputeng" class="col-form-label">Data di assunzione:</label>
-                    <input type="text" class="form-control" id="inputeng">
+                    <label for="input-assunzione" class="col-form-label">Data di assunzione:</label>
+                    <input type="text" class="form-control input-insert" id="input-assunzione">
+                  </div>
+                  <div class="mb-3">
+                    <label for="input-nazione" class="col-form-label">Nazione:</label>
+                    <input type="text" class="form-control input-insert" id="input-nazione">
+                  </div>
+                  <div class="mb-3">
+                    <label for="input-email" class="col-form-label">Email:</label>
+                    <input type="text" class="form-control input-insert" id="input-email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="input-telefono" class="col-form-label">Telefono:</label>
+                    <input type="text" class="form-control input-insert" id="input-telefono">
                   </div>
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-                <button type="button" class="btn btn-primary">Crea</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="closeModal()">Chiudi</button>
+                <button type="button" class="btn btn-primary" id="add-button" onClick="controlForm()">Invia</button>
               </div>
             </div>
           </div>
@@ -115,7 +129,7 @@
         </div>
         <h2>Dipendenti</h2>
         <div class="table-responsive small">
-          <table class="table table-striped table-sm" id="tabella">
+          <table class="table table-striped display" id="tabella" style="width:100%">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -139,9 +153,13 @@
   <!-- jQuery library -->
   <script src="assets/jquery/jquery-3.7.1.min.js"></script>
   <script src="assets/jquery-ui/jquery-ui.js"></script>
-  <script src="assets/jquery-ui/datepicker-it.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/fontawesome/js/all.min.js"></script>
+
+  <script src="../portale/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../portale/assets/fontawesome/js/all.min.js"></script>
+  <script src="../portale/assets/DataTables/datatables.min.js"></script>
+  <script src="../portale/assets/DataTables/dataTables.dateTime.min.js"></script>
+  <script src="../portale/assets/moment.min.js"></script>
+  <script src="../portale/assets/generalFunction.js"></script>
   <script src="assets/service.js"></script>
   <script>
     $(document).ready(function() {
