@@ -127,7 +127,6 @@ function employees() {
                 element += "<td>" + riga.ruolo + "</td>";
                 element += '<td><button type="button" class="btn btn-sm btn-outline-secondary" onClick="viewUser(' + riga.id +')"><i class="fa-solid fa-eye"></i></button></td>';
                 element += '<td><button type="button" class="btn btn-sm btn-outline-secondary" onClick="openModRow(' + riga.id + ')"><i class="fa-solid fa-square-pen"></i></button></td>';
-                element += '<td><button type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-trash"></i></button></td>';
                 $("<tr/>")
                     .append(element)
                     .appendTo("#tabella");
@@ -137,9 +136,14 @@ function employees() {
     });
 }
 
+function openNewRow() {
+    cleanInput();
+    $('#addRow').modal('show');
+}
+
 function openModRow(id) {
     var data = searchData(id);
-    console.log(data);
+    cleanInput();
     idRow = data.id;
     $("#input-nome").val(data.nome);
     $("#input-cognome").val(data.cognome);
@@ -169,6 +173,12 @@ function viewUser(user) {
 
 $(document).ready(function () {
     employees();
+    new DateTime(document.getElementById('input-assunzione'), {
+        format: 'DD/MM/YYYY'
+    });
+    new DateTime(document.getElementById('input-nascita'), {
+        format: 'DD/MM/YYYY'
+    });
 });
     
            
