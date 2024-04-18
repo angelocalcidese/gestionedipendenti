@@ -1,5 +1,5 @@
 <div class="modal fade" id="addRow" tabindex="-1" aria-labelledby="addUserLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="addUserLabel">Nuovo Dipendente</h1>
@@ -8,43 +8,52 @@
                 <div class="alert alert-primary hide" id="alert-success" role="alert"></div>
                 <div class="alert alert-danger hide" id="alert-error" role="alert"></div>
                 <form id="form-add">
-                    <div class="mb-3">
-                        <label for="input-nome" class="col-form-label">Nome:</label>
-                        <input type="text" class="form-control input-insert" id="input-nome">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-cognome" class="col-form-label">Cognome:</label>
-                        <input type="text" class="form-control input-insert" id="input-cognome">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-cf" class="col-form-label">CF:</label>
-                        <input type="text" class="form-control input-insert" id="input-cf">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-nascita" class="col-form-label">Anno di nascita:</label>
-                        <input type="text" class="form-control input-insert" id="input-nascita">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-ruolo" class="col-form-label">Ruolo:</label>
-                        <input type="text" class="form-control input-insert" id="input-ruolo">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-assunzione" class="col-form-label">Data di assunzione:</label>
-                        <input type="text" class="form-control input-insert" id="input-assunzione">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-nazione" class="col-form-label">Nazione:</label>
-                        <input type="text" class="form-control input-insert" id="input-nazione">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-email" class="col-form-label">Email:</label>
-                        <input type="text" class="form-control input-insert" id="input-email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="input-telefono" class="col-form-label">Telefono:</label>
-                        <input type="text" class="form-control input-insert" id="input-telefono">
-                    </div>
-                </form>
+                    <div class="row">
+
+                    
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="input-nome" class="col-form-label">Nome:</label>
+                                <input type="text" class="form-control input-insert" id="input-nome">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-cognome" class="col-form-label">Cognome:</label>
+                                <input type="text" class="form-control input-insert" id="input-cognome">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-cf" class="col-form-label">CF:</label>
+                                <input type="text" class="form-control input-insert" id="input-cf">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-nascita" class="col-form-label">Anno di nascita:</label>
+                                <input type="text" class="form-control input-insert" id="input-nascita">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-ruolo" class="col-form-label">Ruolo:</label>
+                                <input type="text" class="form-control input-insert" id="input-ruolo">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="input-assunzione" class="col-form-label">Data di assunzione:</label>
+                                <input type="text" class="form-control input-insert" id="input-assunzione">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-nazione" class="col-form-label">Nazione:</label>
+                                <input type="text" class="form-control input-insert" id="input-nazione">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-email" class="col-form-label">Email:</label>
+                                <input type="text" class="form-control input-insert" id="input-email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-telefono" class="col-form-label">Telefono:</label>
+                                <input type="text" class="form-control input-insert" id="input-telefono">
+                            </div>
+                        </div>
+                    
+                </div>
+            </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="closeModal()">Chiudi</button>

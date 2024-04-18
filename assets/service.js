@@ -177,7 +177,8 @@ $(document).ready(function () {
         format: 'DD/MM/YYYY'
     });
     new DateTime(document.getElementById('input-nascita'), {
-        format: 'DD/MM/YYYY'
+        format: 'DD/MM/YYYY',
+        minDate: "11-11-1930"
     });
 });
     
