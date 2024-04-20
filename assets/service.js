@@ -119,14 +119,14 @@ function employees() {
             rowel = righe;
             for (i = 0; i < righe.length; i++) {
                 var riga = righe[i];
-                var element = "<td>" + riga.id + "</td>";
+                var element = '<td><i class="fa-solid fa-user" title="' + riga.id + '"></i></td>';
                 element += "<td>" + riga.nome + "</td>";
                 element += "<td>" + riga.cognome + "</td>";
                 element += "<td>" + riga.email + "</td>";
                 element += "<td>" + riga.telefono + "</td>";
                 element += "<td>" + riga.ruolo + "</td>";
-                element += '<td><button type="button" class="btn btn-sm btn-outline-secondary" onClick="viewUser(' + riga.id +')"><i class="fa-solid fa-eye"></i></button></td>';
-                element += '<td><button type="button" class="btn btn-sm btn-outline-secondary" onClick="openModRow(' + riga.id + ')"><i class="fa-solid fa-square-pen"></i></button></td>';
+                element += '<td style="text-align:center"><button type="button" class="btn btn-sm btn-outline-secondary" onClick="viewUser(' + riga.id +')"><i class="fa-solid fa-eye"></i></button></td>';
+                element += '<td style="text-align:center"><button type="button" class="btn btn-sm btn-outline-secondary" onClick="openModRow(' + riga.id + ')"><i class="fa-solid fa-square-pen"></i></button></td>';
                 $("<tr/>")
                     .append(element)
                     .appendTo("#tabella");

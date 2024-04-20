@@ -30,11 +30,11 @@
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Cognome</th>
-                <th scope="col">CF</th>
-                <th scope="col">Anno di nascita</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefono</th>
                 <th scope="col">Ruolo</th>
-                <th scope="col">Dett.</th>
-                <th scope="col">Mod.</th>
+                <th scope="col">Dettaglio</th>
+                <th scope="col">Modifica</th>
               </tr>
             </thead>
             <tbody>
